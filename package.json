@@ -1,0 +1,19 @@
+{
+  "name": "projet3-omyfood",
+  "version": "1.0.0",
+  "description": "Projet 3 Openclassrooms utilisation de sass et des animations css",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./src/sass/main.scss:./src/css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CecilePerrin/CecilePerrin_3_02122020.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CecilePerrin/CecilePerrin_3_02122020/issues"
+  },
+  "homepage": "https://github.com/CecilePerrin/CecilePerrin_3_02122020#readme"
+}
