@@ -1,4 +1,99 @@
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+.loader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0px;
+  z-index: 4;
+  background: rgba(255, 255, 255, 0.9);
+  animation: loader 0.01s;
+  animation-delay: 2s;
+  animation-fill-mode: forwards;
+}
+.loader__spinner {
+  width: 5rem;
+  height: 5rem;
+  display: inline-block;
+  border: 5px solid transparent;
+  border-radius: 50%;
+  border-top-color: #9356DC;
+  animation: 1s spin infinite ease-in-out;
+  z-index: 4;
+  transition-timing-function: cubic-bezier(0, 0.97, 1, 0.08);
+}
+
+@keyframes loader {
+  100% {
+    opacity: 0;
+    z-index: -4;
+  }
+}
+@keyframes spin {
+  0% {
+    opacity: 1;
+    transform: rotate(0deg);
+    border-top-color: #9356DC;
+  }
+  50% {
+    opacity: 0.5;
+    border-top-color: #99E2D0;
+  }
+  100% {
+    opacity: 0.8;
+    transform: rotate(360deg);
+    border-top-color: #FF79DA;
+  }
+}
+.item1 {
+  animation: appear 0.5s;
+  animation-fill-mode: forwards;
+  animation-delay: 0s;
+  transition: transform 330ms ease-out;
+  transition-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+}
+
+.item2 {
+  animation: appear 0.7s;
+  animation-fill-mode: forwards;
+  animation-delay: 0.1s;
+  animation-fill-mode: both;
+  transition: transform 330ms ease-out;
+  transition-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+}
+
+.item3 {
+  animation: appear 0.9s;
+  animation-fill-mode: forwards;
+  animation-delay: 0.2s;
+  animation-fill-mode: both;
+  transition: transform 330ms ease-out;
+  transition-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+}
+
+@keyframes appear {
+  from {
+    transform: translateY(0%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(-15%);
+    opacity: 1;
+  }
+}
+@keyframes slide {
+  from {
+    margin-right: 100%;
+    width: 300%;
+  }
+  to {
+    margin-right: 0%;
+    width: 100%;
+  }
+}
 body, html {
   margin: 0;
 }
@@ -8,9 +103,13 @@ a {
   text-decoration: none;
 }
 
-.Container {
-  max-width: 1280px;
+.Main {
+  max-width: 1900px;
   margin: auto;
+}
+
+h1 {
+  font-size: 25px;
 }
 
 h2 {
@@ -31,7 +130,6 @@ h1 {
 
 button {
   font-family: "Roboto", sans-serif;
-  font-size: 1rem;
 }
 
 .Btn {
@@ -42,6 +140,7 @@ button {
   color: white;
   cursor: pointer;
   background-image: linear-gradient(rgba(255, 121, 218, 0.9), rgba(147, 86, 220, 0.9));
+  font-size: 1.3rem;
 }
 
 footer {
@@ -50,54 +149,34 @@ footer {
   padding: 1rem 2rem;
 }
 
-footer li {
+footer ul {
   list-style: none;
+  padding: 0rem;
+}
+@media (min-width: 64rem) {
+  footer ul {
+    display: flex;
+  }
 }
 
 footer i {
   margin-right: 1rem;
+  width: 1rem;
 }
 
-.loader {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: fixed;
-  height: 100%;
-  width: 100%;
-  left: 0;
-  top: 0px;
-  z-index: 4;
-  background: rgba(255, 255, 255, 0.9);
-  animation: loader 0.01s;
-  animation-delay: 2s;
-  animation-fill-mode: both;
+footer li {
+  margin-bottom: 0.5rem;
 }
-.loader__spinner {
-  width: 5rem;
-  height: 5rem;
-  display: inline-block;
-  border: 5px solid transparent;
-  border-radius: 50%;
-  border-top-color: #9356DC;
-  animation: 1s spin infinite ease-in-out;
-  z-index: 4;
+@media (min-width: 64rem) {
+  footer li {
+    margin: 3rem;
+  }
 }
 
-@keyframes loader {
-  100% {
-    opacity: 0;
-    z-index: -4;
-  }
+footer span {
+  font-size: 15px;
 }
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
+
 .header-accueil {
   display: flex;
   justify-content: center;
@@ -121,7 +200,8 @@ footer i {
   background-color: #f3f3f3;
 }
 .Presentation__title {
-  font-family: "Roboto", sans-serif;
+  font-size: 25px;
+  font-weight: bold;
 }
 
 .DIY {
@@ -133,12 +213,25 @@ footer i {
   position: relative;
   padding: 1rem;
 }
+@media (min-width: 64rem) {
+  .DIY__lists {
+    display: flex;
+  }
+}
 .DIY__list {
   box-shadow: 0.15rem 0.15rem 10px #bebebe;
   border-radius: 15px;
   margin: 0rem 0 1.5rem 0;
   background-color: #f3f3f3;
   padding: 1.5rem;
+}
+@media (min-width: 64rem) {
+  .DIY__list {
+    flex: 1;
+    position: relative;
+    margin: 0;
+    margin-left: 2rem;
+  }
 }
 .DIY__icon {
   /**margin: 0 1.5rem;**/
@@ -162,11 +255,30 @@ footer i {
   align-items: center;
   border-radius: 100px;
   position: absolute;
-  left: 0;
+  left: 0rem;
+}
+@media (min-width: 64rem) {
+  .DIY__list::before {
+    left: -0.8rem;
+  }
 }
 
 .DIY__list:hover {
-  background-color: #f1e9ff;
+  background-color: #f2eafb;
+}
+
+@media (min-width: 64rem) {
+  .wrap {
+    margin: auto;
+    max-width: 1400px;
+  }
+}
+
+@media (min-width: 64rem) {
+  .containrestaurant {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .Restaurants {
@@ -178,19 +290,64 @@ footer i {
   border-radius: 15px;
   background-color: white;
   margin: 1.5rem 0 0;
+  position: relative;
+}
+@media (min-width: 64rem) {
+  .Restaurants__card {
+    margin: 1rem;
+    width: 90%;
+  }
 }
 .Restaurants__text {
   padding: 0 1rem 1rem;
   display: grid;
+  grid-template-columns: 1fr 1fr;
 }
-.Restaurants h3 {
+.Restaurants__Name {
   margin-bottom: 0.5rem;
+}
+.Restaurants__City {
+  grid-column-start: 1;
 }
 .Restaurants__new {
   position: absolute;
+  border-radius: 0.3rem;
   background-color: #99E2D0;
   color: #2d9158;
   padding: 0.5rem;
+  right: 1.5rem;
+  top: 1rem;
+}
+.Restaurants__Heart {
+  display: flex;
+  color: #7c7c7c;
+  align-items: center;
+  margin-top: 1.5rem;
+  margin-right: 1rem;
+  justify-content: flex-end;
+  grid-column: 2;
+  grid-row: 1/2;
+  font-size: 25px;
+}
+.Restaurants__Heart--hidden {
+  display: flex;
+  cursor: pointer;
+  color: transparent;
+  opacity: 0;
+  align-items: center;
+  margin-top: 1.5rem;
+  margin-right: 1rem;
+  justify-content: flex-end;
+  grid-column: 2;
+  grid-row: 1/2;
+  font-size: 25px;
+  transition: opacity 0.3s ease-out;
+}
+.Restaurants__Heart--hidden:hover {
+  background: -webkit-linear-gradient(#9356DC, #FF79DA);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 1;
 }
 
 .Imgcard {
@@ -201,8 +358,9 @@ footer i {
 }
 
 .Image_restaurant {
+  max-width: 100%;
+  max-height: 24rem;
   width: 100%;
-  height: 24rem;
   object-fit: cover;
 }
 
@@ -216,6 +374,7 @@ footer i {
   position: absolute;
   left: 20px;
   top: 25px;
+  font-size: 1.5rem;
 }
 
 .Sectioncard {
@@ -224,29 +383,72 @@ footer i {
 .Sectioncard__title {
   text-transform: uppercase;
   font-weight: lighter;
+  margin-bottom: 1.5rem;
   padding-bottom: 0.5rem;
   border-bottom: solid #99E2D0 3.5px;
   width: 50px;
 }
 
+@media (min-width: 64rem) {
+  .Container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
 .Menus {
+  max-width: 1600px;
+  margin: auto;
   background-color: #f3f3f3;
   border-radius: 2rem 2rem 0 0;
   position: relative;
   z-index: 1;
-  margin-top: -10rem;
-  padding-bottom: 10rem;
+  margin-top: -5rem;
+  padding-bottom: 5rem;
 }
 .Menus__header {
   margin: 1rem;
   padding-top: 1rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 2fr 0.3fr;
 }
 .Menus__commander {
   display: flex;
+  align-items: center;
   justify-content: center;
+}
+.Menus__Heart {
+  display: flex;
+  color: #7c7c7c;
+  align-items: center;
+  margin-top: 1.5rem;
+  margin-right: 1rem;
+  justify-content: flex-end;
+  grid-column: 2;
+  grid-row: 1/2;
+  font-size: 25px;
+  padding-bottom: 1.5rem;
+}
+.Menus__Heart--hidden {
+  display: flex;
+  cursor: pointer;
+  color: transparent;
+  opacity: 0;
+  align-items: center;
+  margin-top: 1.5rem;
+  margin-right: 1rem;
+  justify-content: flex-end;
+  grid-column: 2;
+  grid-row: 1/2;
+  font-size: 25px;
+  transition: opacity 0.3s ease-out;
+  padding-bottom: 1.5rem;
+}
+.Menus__Heart--hidden:hover {
+  background: -webkit-linear-gradient(#9356DC, #FF79DA);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 1;
 }
 
 .Menucard {
@@ -256,48 +458,55 @@ footer i {
   background-color: #f3f3f3;
   background-color: white;
   display: grid;
-  grid-template-columns: 1fr 0.3fr 1fr;
+  position: relative;
+  grid-template-columns: 1fr 0.3fr 0.3fr;
   grid-column-gap: 25px;
   cursor: pointer;
   overflow: hidden;
 }
 .Menucard__dishes {
   margin: 0;
+  padding: 0;
   width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
   text-overflow: ellipsis;
   margin: 1.5rem 0rem 0.5rem 1.5rem;
 }
 .Menucard__flavor {
+  margin: 0;
+  padding: 0;
   width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
   text-overflow: ellipsis;
   grid-column-start: 1;
-  grid-row-end: span 2;
   margin: 0rem 0rem 1.5rem 1.5rem;
 }
 .Menucard__price {
   display: flex;
   justify-content: flex-end;
+  flex: 1;
 }
 .Menucard__confirmation {
   background-color: #99E2D0;
   width: 100%;
   height: 100%;
   display: flex;
+  grid-column: 3;
+  grid-row: 1/3;
   align-items: center;
   justify-content: center;
-  grid-column: 3;
-  grid-row: 1/4;
-  border-radius: 0 15px 15px 0;
   transition-duration: 0.5s;
 }
-.Menucard__confirmation:hover {
-  margin-right: 10rem;
+.Menucard:hover .Menucard__confirmation {
+  transform: translateX(200%);
 }
 
 .fa-check-circle {
   color: white;
   font-size: 30px;
-  transform: rotate(200deg);
+  transform: rotate(360deg);
   transition-duration: 0.5s;
 }
 .fa-check-circle:hover {

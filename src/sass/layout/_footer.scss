@@ -3,9 +3,25 @@ footer{
     color: white;
     padding: 1rem 2rem;
 }
-footer li{
+footer ul{
     list-style: none;
+    padding: 0rem;
+    @media (min-width:64rem){
+        display: flex;
+    }
+    
 }
 footer i {
     margin-right: 1rem;
+    width: 1rem;
+}
+
+footer li{
+    margin-bottom: 0.5rem;
+    @media(min-width: 64rem){
+        margin: 3rem;
+    }
+}
+footer span{
+    font-size: 15px;
 }

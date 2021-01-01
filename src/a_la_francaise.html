@@ -5,7 +5,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <script src="https://kit.fontawesome.com/0915c80407.js" crossorigin="anonymous"></script>
       <link rel= "stylesheet"  href="/src/css/style.css">
-      <title>Document</title>
+      <title>Ohmyfood-A la française</title>
    </head>
    <body>
       <header>
@@ -15,82 +15,84 @@
          </div>
          <img class="Image_restaurant" src="img/restaurants/alafrancaise.jpg" alt="photo du restaurant à la Francaise">
       </header>
-      <div class="Container">
+      
          <div class="Menus">
             <div class="Menus__header">
-               <h1>A la française </h1>
-               <div><i class="far fa-heart"></i></div>
+               <h1>A la française </h1>              
+               <i class="far fa-heart Menus__Heart"></i>
+               <i class="fas fa-heart Menus__Heart--hidden"></i>             
             </div>
-            <section class="Sectioncard">
-               <h2 class="Sectioncard__title">Entrée</h2>
-               <div class="Menucard">
-                  <h3 class="Menucard__dishes">Tartare de poulpe acidulé</h3>
-                  <p class="Menucard__flavor">Aux zestes d'orange</p>
-                  <div class="Menucard__price">25€</div>
-                  <div class="Menucard__confirmation"><i class="fas fa-check-circle"></i></div>
-               </div>
-               <div class="Menucard">
-                  <h3  class="Menucard__dishes">Velouté de légumes d'antan</h3>
-                  <p class="Menucard__flavor">Carotte, panais, topinambor</p>
-                  <div class="Menucard__price">35€</div>
-                  <div class="Menucard__confirmation"><i class="fas fa-check-circle"></i></div>
-               </div>
-               <div class="Menucard">
-                  <h3  class="Menucard__dishes">Soupe à l'oignon</h3>
-                  <p class="Menucard__flavor">Revisitée</p>
-                  <div class="Menucard__price">20€</div>
-                  <div class="Menucard__confirmation"><i class="fas fa-check-circle"></i></div>
-               </div>
-            </section>
-            <section class="Sectioncard">
-               <h2 class="Sectioncard__title">plats</h2>
-               <div class="Menucard">
-                  <h3  class="Menucard__dishes">Coquilles Saint-Jacques</h3>
-                  <p class="Menucard__flavor">Accompagnées d'une purée de panais</p>
-                  <div class="Menucard__price">40€</div>
-                  <div class="Menucard__confirmation"><i class="fas fa-check-circle"></i></div>
-               </div>
-               <div class="Menucard">
-                  <h3 class="Menucard__dishes">Magret de canard</h3>
-                  <p class="Menucard__flavor">Et parmentier de pommes de terres</p>
-                  <div class="Menucard__price">35€</div>
-                  <div class="Menucard__confirmation"><i class="fas fa-check-circle"></i></div>
-               </div>
-               <div class="Menucard">
-                  <h3  class="Menucard__dishes">Pigeonneau d'ille-et-Vilaine</h3>
-                  <p class="Menucard__flavor">Sur son lit de gnocchis aux légumes</p>
-                  <div class="Menucard__price">44€</div>
-                  <div class="Menucard__confirmation"><i class="fas fa-check-circle"></i></div>
-               </div>
-            </section>
-            <section class="Sectioncard">
-               <h2 class="Sectioncard__title">desserts</h2>
-               <div class="Menucard">
-                  <h3  class="Menucard__dishes">Pétales de violettes glacés</h3>
-                  <p class="Menucard__flavor">Et purée de noisettes</p>
-                  <div class="Menucard__price">18€</div>
-                  <div class="Menucard__confirmation"><i class="fas fa-check-circle"></i></div>
-               </div>
-               <div class="Menucard">
-                  <h3  class="Menucard__dishes">Fondant au chocolat</h3>
-                  <p class="Menucard__flavor">Revisité</p>
-                  <div class="Menucard__price">22€</div>
-                  <div class="Menucard__confirmation"><i class="fas fa-check-circle"></i></div>
-               </div>
-               <div class="Menucard">
-                  <h3 class="Menucard__dishes">Millefeuille croustillant</h3>
-                  <p class="Menucard__flavor">Myrtilles et pâte d'amande</p>
-                  <div class="Menucard__price">23€</div>
-                  <div class="Menucard__confirmation"><i class="fas fa-check-circle"></i></div>
-               </div>
-            </section>
+            <div class="Container">
+               <section class="Sectioncard">
+                  <h2 class="Sectioncard__title">Entrées</h2>
+                  <div class="Menucard item1">
+                     <h3 class="Menucard__dishes">Tartare de poulpe acidulé</h3>
+                     <p class="Menucard__flavor">Aux zestes d'orange</p>
+                     <div class="Menucard__price">25€</div>
+                     <div class="Menucard__confirmation"><i class="fas fa-check-circle"></i></div>
+                  </div>
+                  <div class="Menucard item2">
+                     <h3  class="Menucard__dishes">Velouté de légumes d'antan</h3>
+                     <p class="Menucard__flavor">Carotte, panais, topinambor</p>
+                     <div class="Menucard__price">35€</div>
+                     <div class="Menucard__confirmation"><i class="fas fa-check-circle"></i></div>
+                  </div>
+                  <div class="Menucard item3">
+                     <h3  class="Menucard__dishes">Soupe à l'oignon</h3>
+                     <p class="Menucard__flavor">Revisitée</p>
+                     <div class="Menucard__price">20€</div>
+                     <div class="Menucard__confirmation"><i class="fas fa-check-circle"></i></div>
+                  </div>
+               </section>
+               <section class="Sectioncard">
+                  <h2 class="Sectioncard__title">plats</h2>
+                  <div class="Menucard item1">
+                     <h3  class="Menucard__dishes">Coquilles Saint-Jacques</h3>
+                     <p class="Menucard__flavor">Accompagnées d'une purée de panais</p>
+                     <div class="Menucard__price">40€</div>
+                     <div class="Menucard__confirmation"><i class="fas fa-check-circle"></i></div>
+                  </div>
+                  <div class="Menucard item2">
+                     <h3 class="Menucard__dishes">Magret de canard</h3>
+                     <p class="Menucard__flavor">Et parmentier de pommes de terres</p>
+                     <div class="Menucard__price">35€</div>
+                     <div class="Menucard__confirmation"><i class="fas fa-check-circle"></i></div>
+                  </div>
+                  <div class="Menucard item3">
+                     <h3  class="Menucard__dishes">Pigeonneau d'ille-et-Vilaine</h3>
+                     <p class="Menucard__flavor">Sur son lit de gnocchis aux légumes</p>
+                     <div class="Menucard__price">44€</div>
+                     <div class="Menucard__confirmation"><i class="fas fa-check-circle"></i></div>
+                  </div>
+               </section>
+               <section class="Sectioncard">
+                  <h2 class="Sectioncard__title">desserts</h2>
+                  <div class="Menucard item1">
+                     <h3  class="Menucard__dishes">Pétales de violettes glacés</h3>
+                     <p class="Menucard__flavor">Et purée de noisettes</p>
+                     <div class="Menucard__price">18€</div>
+                     <div class="Menucard__confirmation"><i class="fas fa-check-circle"></i></div>
+                  </div>
+                  <div class="Menucard item2">
+                     <h3  class="Menucard__dishes">Fondant au chocolat</h3>
+                     <p class="Menucard__flavor">Revisité</p>
+                     <div class="Menucard__price">22€</div>
+                     <div class="Menucard__confirmation"><i class="fas fa-check-circle"></i></div>
+                  </div>
+                  <div class="Menucard item3">
+                     <h3 class="Menucard__dishes">Millefeuille croustillant</h3>
+                     <p class="Menucard__flavor">Myrtilles et pâte d'amande</p>
+                     <div class="Menucard__price">23€</div>
+                     <div class="Menucard__confirmation"><i class="fas fa-check-circle"></i></div>
+                  </div>
+               </section>
+            </div>
             <div class="Menus__commander">
                <a href="#"><button class= Btn>Commander</button></a>
             </div>
-         </div>
       </div>
       <Footer>
-         <h3>Ohmyfood</h3>
+         <h1>Ohmyfood</h1>
             <ul>
                <li><i class="fas fa-utensils"></i>Proposer un restaurant</li>
                <li><i class="fas fa-hands-helping"></i>Dévenir partenaire</li>

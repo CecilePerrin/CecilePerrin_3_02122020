@@ -1,44 +1,4 @@
-.loader{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: fixed;
-    height: 100%;
-    width: 100%;
-    left: 0;
-    top: 0px;
-    z-index: 4;
-    background: hsla(0,0%,100%,.9);
-    animation: loader 0.01s;
-    animation-delay: 2s;
-    animation-fill-mode: both; 
-    &__spinner{
-        width: 5rem;
-        height: 5rem;
-        display: inline-block;
-        border: 5px solid transparent;
-        border-radius: 50%;
-        border-top-color:$colour-primary; 
-        animation: 1s spin infinite ease-in-out;
-        z-index: 4;
-              
-        }
-}
 
-@keyframes loader{
-    100%{
-        opacity: 0;
-        z-index: -4;
-    }
-  
-}
-
-@keyframes spin{
-    0%{transform: rotate(0deg);}
-    100% {transform: rotate(360deg);
-        
-    }
-}
 .header-accueil {
     display: flex;
     justify-content: center;
@@ -61,10 +21,12 @@
     text-align: center;
     background-color: $colour-section;
     &__title{
-        font-family: 'Roboto', sans-serif; 
+        font-size: 25px;
+        font-weight: bold;
     }
     
 }
+
 .DIY {
     padding: 2rem 1rem;
 
@@ -73,10 +35,20 @@
         list-style: none;
         position: relative;
         padding: 1rem;
+       
+        @media (min-width:64rem){
+            display: flex;
+            }
         }
         &__list{
             @include card;
             padding: 1.5rem;
+            @media (min-width:64rem) {
+                flex: 1;
+                position: relative;
+                margin: 0;
+                margin-left: 2rem;
+                }
         }
         &__icon{
             /**margin: 0 1.5rem;**/
@@ -102,34 +74,72 @@
     align-items: center;
     border-radius: 100px;
     position: absolute;
-    left: 0;
+    left: 0rem;
+    @media (min-width:64rem) {
+        left: -0.80rem;
      }
+ }
 
 .DIY__list:hover{
-    background-color:rgb(241, 233, 255);
+    background-color: $light-main-color;
     }
 
+.wrap{
+     @media (min-width:64rem){
+         margin: auto;
+         max-width: 1400px;
 
+        }
+    }
 
+.containrestaurant{
+    @media (min-width:64rem) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+      }
+}
 .Restaurants {
     background-color: $colour-section;
     padding: 1rem 1rem;
     &__card {
         @include restaurant;
+        position: relative;
+        @media (min-width:64rem){
+            margin: $layout-margin;
+            width: 90%;
+        }
+
     }
-    &__text{
-        padding: 0 1rem 1rem;
-        display: grid;
+        &__text{
+            padding: 0 1rem 1rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
         
-    }
-    & h3{
-        margin-bottom: 0.5rem;
-    }
-    &__new{
-        position: absolute;
-        background-color: $colour-tertiare;
-        color: rgb(45, 145, 88);
-        padding: .5rem;      
+        }
+        &__Name{
+            margin-bottom: 0.5rem;
+        }
+        &__City{
+            grid-column-start: 1;
+        }
+        &__new{
+            position: absolute;
+            border-radius:0.3rem ;
+            background-color: $colour-tertiare;
+            color: rgb(45, 145, 88);
+            padding: .5rem;
+            right: 1.5rem;
+            top: 1rem;     
+           
+        }
+        &__Heart{
+          @include Heart;
+        }
+        &__Heart--hidden{
+           @include Hearthidden;
+            &:hover{
+               @include Hearthover;
+            }
     }
 }
 .Imgcard{
