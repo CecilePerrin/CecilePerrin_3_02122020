@@ -52,7 +52,7 @@
 
 
 .item1{
-    animation: appear 0.5s;
+    animation: appear 0.5s ;
     animation-fill-mode: forwards;
     animation-delay: 0s;  
     transition: transform 330ms ease-out;
@@ -86,17 +86,3 @@
        opacity: 1;
    }
 }
-
-
-@keyframes slide{
-    from{
-        margin-right: 100%;
-        width: 300%;
-
-    }
-    to{
-       margin-right: 0%;
-        width: 100%;
-    }
-}
-

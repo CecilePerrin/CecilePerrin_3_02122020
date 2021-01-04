@@ -1,4 +1,28 @@
 .Btn{
     @include btn;
-    font-size: 1.3rem;
+    background-color: red;
+    transition-duration: 0.5s;
+
+    &:hover{
+        &::after{
+            opacity: 1;
+        }
+    
+    }
+    &::after{
+        content: "";
+        @include btn;
+        position: absolute;
+        background-color: white;
+        box-shadow: .15rem .25rem 10px rgb(126, 126, 126);
+        top:0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        opacity: 0;
+        z-index: -1;
+        transition: opacity 250ms;
+
+    }
+
 }

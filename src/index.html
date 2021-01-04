@@ -4,8 +4,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <script src="https://kit.fontawesome.com/0915c80407.js" crossorigin="anonymous"></script>
       <title>Ohmyfood!</title>
-      <link rel= "stylesheet"  href="/src/css/style.css">
-      <link rel="stylesheet" href="">
+      <link rel= "stylesheet"  href="css\style.css">
    </head>
    <body>
       
@@ -23,17 +22,19 @@
          <p class="localisation__text"> <i class="fas fa-map-marker-alt localisation__icon"></i>Paris, Bellevile</p>
          </section>
          <section class="Presentation">
-            <span class="Presentation__title">Réservez le menu qui vous convient</span>
+            <h2 class="Presentation__title">Réservez le menu qui vous convient</h2>
             <p class="Presentation__text">Découvrez des restaurants d'exception, sélectionnés par nos soins</p>
-            <a href="#"><button class= Btn> Explorer nos restaurants</button></a>
+            <div class="Presentation__button">
+               <a href="#Restaurants"><div class= Btn> Explorer nos restaurants</div></a>
+            </div>
          </section>
          <section class="DIY">
             <div class="wrap">
                <h2>Fonctionnement</h2>
                <ol class="DIY__lists">
-                  <li class="DIY__list"> <i class="fas fa-mobile-alt DIY__icon "></i><span class="DIY__text">Choissisez un restaurant</span></li>
-                  <li class="DIY__list"><i class="fas fa-list-ul DIY__icon"></i><span class="DIY__text">Composer votre menu</span></li>
-                  <li class="DIY__list"><i class="fas fa-store DIY__icon"></i><span class="DIY__text">Dégustez au restaurant</span></li>
+                  <li class="DIY__list step-one"> <i class="fas fa-mobile-alt DIY__icon "></i><span class="DIY__text">Choissisez un restaurant</span></li>
+                  <li class="DIY__list step-two"><i class="fas fa-list-ul DIY__icon"></i><span class="DIY__text">Composer votre menu</span></li>
+                  <li class="DIY__list step-three"><i class="fas fa-store DIY__icon"></i><span class="DIY__text">Dégustez au restaurant</span></li>
                </ol>
             </div>
          </section>
@@ -41,7 +42,7 @@
             <div class="wrap">
                <h2>Restaurants</h2> 
                <div class="containrestaurant">
-                  <a href="/src/la_palette_du_gout.html">
+                  <a href="la_palette_du_gout.html">
                      <div class="Restaurants__card">
                         <img class="Imgcard" src="img/restaurants/lapalettedugout.jpg" alt="La palette du gout">
                         <span class="Restaurants__new">Nouveau</span>
@@ -53,7 +54,7 @@
                            </div>
                      </div>
                   </a>
-                  <a href="/src/la_note_enchantee.html">
+                  <a href="la_note_enchantee.html">
                      <div class="Restaurants__card">
                         <img class="Imgcard" src="img/restaurants/lanoteenchantee.jpg" alt="La note enchantée">
                         <span class="Restaurants__new">Nouveau</span>
@@ -65,7 +66,7 @@
                            </div>
                      </div>
                   </a>
-                  <a href="/src/a_la_francaise.html">
+                  <a href="a_la_francaise.html">
                      <div class="Restaurants__card">
                         <img class="Imgcard" src="img/restaurants/alafrancaise.jpg" alt="A la française">
                         <div class="Restaurants__text">
@@ -76,7 +77,7 @@
                            </div>
                      </div>
                   </a>   
-                  <a href="/src/le_delice_des_sens.html">
+                  <a href="le_delice_des_sens.html">
                      <div class="Restaurants__card">
                         <img class="Imgcard" src="img/restaurants/delicedessens.jpg" alt="Le délice des sens">
                         <div class="Restaurants__text">
@@ -97,7 +98,7 @@
                <li><i class="fas fa-utensils"></i>Proposer un restaurant</li>
                <li><i class="fas fa-hands-helping"></i>Dévenir partenaire</li>
                <li>Mentions Légales</li>
-               <li>Contact</li>
+               <li><a class="footer_mail" href="mailto:ohmyfood@mail.com">Contact</a></li>
             </ul>
          </footer>
       </div>

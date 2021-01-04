@@ -24,6 +24,11 @@
         font-size: 25px;
         font-weight: bold;
     }
+    &__button{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
     
 }
 
@@ -35,6 +40,7 @@
         list-style: none;
         position: relative;
         padding: 1rem;
+        font-weight: bold;
        
         @media (min-width:64rem){
             display: flex;
@@ -51,12 +57,8 @@
                 }
         }
         &__icon{
-            /**margin: 0 1.5rem;**/
             margin-right: 1.5rem ;
             color: rgb(112, 112, 112);
-                &:hover{
-                    color: $colour-primary;
-                }
         }
     }
 
@@ -78,6 +80,9 @@
     @media (min-width:64rem) {
         left: -0.80rem;
      }
+ }
+ .DIY__list:hover .DIY__icon{
+    color: $colour-primary
  }
 
 .DIY__list:hover{
