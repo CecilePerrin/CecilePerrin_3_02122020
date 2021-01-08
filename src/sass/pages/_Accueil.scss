@@ -1,74 +1,69 @@
-
 .header-accueil {
     display: flex;
     justify-content: center;
     padding: 1rem;
     @include card-shadow;
     position: relative;
-}
-
-.localisation {
+ }
+ 
+ .localisation {
     display: flex;
-    justify-content: center; 
+    justify-content: center;
     background-color: rgb(228, 228, 228);
-    &__icon{
-        margin-right: 1rem;
+    &__icon {
+       margin-right: 1rem;
     }
-}
-
-.Presentation {
+ }
+ 
+ .Presentation {
     padding: 2rem;
     text-align: center;
     background-color: $colour-section;
-    &__title{
-        font-size: 25px;
-        font-weight: bold;
+    &__title {
+       font-size: 25px;
+       font-weight: bold;
     }
-    &__button{
-        display: flex;
-        align-items: center;
-        justify-content: center;
+    &__button {
+       display: flex;
+       align-items: center;
+       justify-content: center;
     }
-    
-}
-
-.DIY {
+ }
+ 
+ .DIY {
     padding: 2rem 1rem;
-
-        &__lists {
-        counter-reset: compteListe;
-        list-style: none;
-        position: relative;
-        padding: 1rem;
-        font-weight: bold;
-       
-        @media (min-width:64rem){
-            display: flex;
-            }
-        }
-        &__list{
-            @include card;
-            padding: 1.5rem;
-            @media (min-width:64rem) {
-                flex: 1;
-                position: relative;
-                margin: 0;
-                margin-left: 2rem;
-                }
-        }
-        &__icon{
-            margin-right: 1.5rem ;
-            color: rgb(112, 112, 112);
-        }
+    &__lists {
+       counter-reset: compteListe;
+       list-style: none;
+       position: relative;
+       padding: 1rem;
+       font-weight: bold;
+       @media (min-width: 64rem) {
+          display: flex;
+       }
     }
-
+    &__list {
+       @include card;
+       padding: 1.5rem;
+       @media (min-width: 64rem) {
+          flex: 1;
+          position: relative;
+          margin: 0;
+          margin-left: 2rem;
+       }
+    }
+    &__icon {
+       margin-right: 1.5rem;
+       color: rgb(112, 112, 112);
+    }
+ }
+ 
  .DIY__list::before {
-           
     counter-increment: compteListe 1;
     content: counter(compteListe) "";
     background-color: $colour-primary;
     z-index: 3;
-    color:white;
+    color: white;
     height: 25px;
     width: 25px;
     display: flex;
@@ -77,77 +72,75 @@
     border-radius: 100px;
     position: absolute;
     left: 0rem;
-    @media (min-width:64rem) {
-        left: -0.80rem;
-     }
+    @media (min-width: 64rem) {
+       left: -0.80rem;
+    }
  }
- .DIY__list:hover .DIY__icon{
+ 
+ .DIY__list:hover .DIY__icon {
     color: $colour-primary
  }
-
-.DIY__list:hover{
+ 
+ .DIY__list:hover {
     background-color: $light-main-color;
+ }
+ 
+ .wrap {
+    @media (min-width: 64rem) {
+       margin: auto;
+       max-width: 1400px;
     }
-
-.wrap{
-     @media (min-width:64rem){
-         margin: auto;
-         max-width: 1400px;
-
-        }
+ }
+ 
+ .containrestaurant {
+    @media (min-width: 64rem) {
+       display: grid;
+       grid-template-columns: repeat(2, 1fr);
     }
-
-.containrestaurant{
-    @media (min-width:64rem) {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-      }
-}
-.Restaurants {
+ }
+ 
+ .Restaurants {
     background-color: $colour-section;
     padding: 1rem 1rem;
     &__card {
-        @include restaurant;
-        position: relative;
-        @media (min-width:64rem){
-            margin: $layout-margin;
-            width: 90%;
-        }
-
+       @include restaurant;
+       position: relative;
+       @media (min-width: 64rem) {
+          margin: $layout-margin;
+          width: 90%;
+       }
     }
-        &__text{
-            padding: 0 1rem 1rem;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-        
-        }
-        &__Name{
-            margin-bottom: 0.5rem;
-        }
-        &__City{
-            grid-column-start: 1;
-        }
-        &__new{
-            position: absolute;
-            border-radius:0.3rem ;
-            background-color: $colour-tertiare;
-            color: rgb(45, 145, 88);
-            padding: .5rem;
-            right: 1.5rem;
-            top: 1rem;     
-           
-        }
-        &__Heart{
-          @include Heart;
-        }
-        &__Heart--hidden{
-           @include Hearthidden;
-            &:hover{
-               @include Hearthover;
-            }
+    &__text {
+       padding: 0 1rem 1rem;
+       display: grid;
+       grid-template-columns: 1fr 1fr;
     }
-}
-.Imgcard{
+    &__Name {
+       margin-bottom: 0.5rem;
+    }
+    &__City {
+       grid-column-start: 1;
+    }
+    &__new {
+       position: absolute;
+       border-radius: 0.3rem;
+       background-color: $colour-tertiare;
+       color: rgb(45, 145, 88);
+       padding: .5rem;
+       right: 1.5rem;
+       top: 1rem;
+    }
+    &__Heart {
+       @include Heart;
+    }
+    &__Heart--hidden {
+       @include Hearthidden;
+       &:hover {
+          @include Hearthover;
+       }
+    }
+ }
+ 
+ .Imgcard {
     @include imagecard;
-}
-
+ }

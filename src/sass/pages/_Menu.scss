@@ -1,139 +1,140 @@
-.Image_restaurant{
+.Image_restaurant {
     @include Imagerestaurant;
-}
-.header__Menu{
+ }
+ 
+ .header__Menu {
     display: flex;
     justify-content: center;
     margin: 1rem;
-}
-.fa-arrow-left{
-   position: absolute;
-   left: 20px;
-   top: 25px;
-   font-size: 1.5rem;
-}
-.Sectioncard{
-    margin: 1rem;
-    &__title{
-        text-transform: uppercase;
-        font-weight: lighter;
-        margin-bottom: 1.5rem;
-        padding-bottom: 0.5rem;
-        border-bottom: solid $colour-tertiare 3.5px ;
-        width: 50px;
-    }
-
-}
-
-.Container{
-    
-@media (min-width:64rem){
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
+ }
  
+ .fa-arrow-left {
+    position: absolute;
+    left: 20px;
+    top: 25px;
+    font-size: 1.5rem;
+ }
+ 
+ .Sectioncard {
+    margin: 1rem;
+    &__title {
+       text-transform: uppercase;
+       font-weight: lighter;
+       margin-bottom: 1.5rem;
+       padding-bottom: 0.5rem;
+       border-bottom: solid $colour-tertiare 3.5px;
+       width: 50px;
     }
-}
-.Menus{
+ }
+ 
+ .Container {
+    @media (min-width: 64rem) {
+       display: grid;
+       grid-template-columns: repeat(3, 1fr);
+    }
+ }
+ 
+ .Menus {
     max-width: 1600px;
     margin: auto;
     background-color: $colour-section;
     border-radius: 2rem 2rem 0 0;
     position: relative;
     z-index: 1;
-    margin-top: -5rem; 
+    margin-top: -5rem;
     padding-bottom: 5rem;
-    &__header{
-        margin: $layout-margin;
-        padding-top: 1rem;
-        display: grid;
-        grid-template-columns: 2fr 0.3fr;  
-    } 
-    &__commander{
-        display:flex;
-        align-items: center;
-        justify-content: center;
+    &__header {
+       margin: $layout-margin;
+       padding-top: 1rem;
+       display: grid;
+       grid-template-columns: 2fr 0.3fr;
     }
-    &__Heart{
-        @include Heart;
-        padding-bottom: 1.5rem;
+    &__commander {
+       display: flex;
+       align-items: center;
+       justify-content: center;
     }
-    &__Heart--hidden{
-        @include Hearthidden;
-        padding-bottom: 1.5rem;
-        &:hover{
-            @include Hearthover;
-                  
-        }
+    &__Heart {
+       @include Heart;
+       padding-bottom: 1.5rem;
     }
-}
-
-.Menucard{
+    &__Heart--hidden {
+       @include Hearthidden;
+       padding-bottom: 1.5rem;
+       &:hover {
+          @include Hearthover;
+       }
+    }
+ }
+ 
+ .Menucard {
     @include card;
-    background-color:white;
+    background-color: white;
     display: flex;
     max-width: 100%;
     cursor: pointer;
     overflow: hidden;
-    &__header{
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        flex:1;
+    &__header {
+       white-space: nowrap;
+       overflow: hidden;
+       text-overflow: ellipsis;
+       flex: 1;
     }
-    &__dishes{
-        margin: 0;
-        padding: 0;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        margin: 1rem 0rem 0.5rem 0.8rem;
+    &__dishes {
+       margin: 0;
+       padding: 0;
+       white-space: nowrap;
+       overflow: hidden;
+       text-overflow: ellipsis;
+       margin: 1rem 0rem 0.5rem 0.8rem;
     }
-    &__flavor{
-        margin: 0;
-        padding: 0;
-        font-size: 15px;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        grid-column-start: 1;
-        margin: 0rem 0rem .8rem 0.8rem;
+    &__flavor {
+       margin: 0;
+       padding: 0;
+       font-size: 15px;
+       overflow: hidden;
+       text-overflow: ellipsis;
+       grid-column-start: 1;
+       margin: 0rem 0rem .8rem 0.8rem;
     }
-    &__price{
-        display: flex; 
-        justify-content: flex-end;
-        align-items: flex-end;
-        font-weight: bold;
-        margin-right: 1rem;
-        margin-bottom: 0.8rem;
-}
-    &__confirmation{
-        background-color:$colour-tertiare;
-        margin: -1rem -5rem -1rem 1rem;
-        width: 5rem;
-        display:flex;
-        align-items:center;
-        justify-content:center;
-        transition-duration: 0.8s;
+    &__price {
+       display: flex;
+       justify-content: flex-end;
+       align-items: flex-end;
+       font-weight: bold;
+       margin-right: 1rem;
+       margin-bottom: 0.8rem;
     }
-}
-
-.Menucard:hover .Menucard__confirmation{
-   margin-right: -0.5rem;
-}
-.Menucard:active .Menucard__confirmation{
+    &__confirmation {
+       background-color: $colour-tertiare;
+       margin: -1rem -5rem -1rem 1rem;
+       width: 5rem;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       transition-duration: 0.8s;
+    }
+ }
+ 
+ .Menucard:hover .Menucard__confirmation {
     margin-right: -0.5rem;
  }
  
-.fa-check-circle{
-    color:white;
-    font-size: 25px;
-    transform: rotate(200deg);
-    transition-duration:0.5s;
+ .Menucard:active .Menucard__confirmation {
+    margin-right: -0.5rem;
  }
-
- .Menucard:hover .fa-check-circle{
+ 
+ .fa-check-circle {
+    color: white;
+    font-size: 25px;
+    transform: rotate(360deg);
+    transition-duration: 0.5s;
+ }
+ 
+ .Menucard:hover .fa-check-circle {
     transform: rotate(0);
  }
-
- .Menucard:active .fa-check-circle{
+ 
+ .Menucard:active .fa-check-circle {
     transform: rotate(0);
  }

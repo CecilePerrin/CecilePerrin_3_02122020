@@ -528,7 +528,7 @@ footer span {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition-duration: 0.5s;
+  transition-duration: 0.8s;
 }
 
 .Menucard:hover .Menucard__confirmation {
@@ -542,7 +542,7 @@ footer span {
 .fa-check-circle {
   color: white;
   font-size: 25px;
-  transform: rotate(200deg);
+  transform: rotate(360deg);
   transition-duration: 0.5s;
 }
 
