@@ -48,30 +48,30 @@
     border-top-color: #FF79DA;
   }
 }
-.item1 {
-  animation: appear 0.5s;
+.Menucard {
+  animation: appear;
+  animation-duration: 0.5s;
   animation-fill-mode: forwards;
   animation-delay: 0s;
+  animation-fill-mode: both;
   transition: transform 330ms ease-out;
   transition-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
 }
-
-.item2 {
-  animation: appear 0.7s;
-  animation-fill-mode: forwards;
+.Menucard:nth-child(2) {
   animation-delay: 0.1s;
-  animation-fill-mode: both;
-  transition: transform 330ms ease-out;
-  transition-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+  animation-duration: 0.7s;
 }
-
-.item3 {
-  animation: appear 0.9s;
-  animation-fill-mode: forwards;
-  animation-delay: 0.2s;
-  animation-fill-mode: both;
-  transition: transform 330ms ease-out;
-  transition-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+.Menucard:nth-child(3) {
+  animation-delay: 0.3s;
+  animation-duration: 0.9s;
+}
+.Menucard:nth-child(4) {
+  animation-delay: 0.5s;
+  animation-duration: 1s;
+}
+.Menucard:nth-child(5) {
+  animation-delay: 0.7s;
+  animation-duration: 1.2s;
 }
 
 @keyframes appear {
@@ -80,7 +80,7 @@
     opacity: 0;
   }
   to {
-    transform: translateY(-15%);
+    transform: translateY(-20%);
     opacity: 1;
   }
 }
@@ -116,10 +116,6 @@ body, html {
 
 h1 {
   font-family: "Shrikhand", cursive;
-}
-
-button {
-  font-family: "Roboto", sans-serif;
 }
 
 .Btn {
@@ -197,6 +193,10 @@ footer li {
 
 footer span {
   font-size: 15px;
+}
+
+.footer_mail {
+  text-decoration: underline;
 }
 
 .header-accueil {
@@ -528,22 +528,22 @@ footer span {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition-duration: 0.8s;
+  transition-duration: 500ms;
 }
 
 .Menucard:hover .Menucard__confirmation {
-  margin-right: -0.5rem;
+  margin-right: 0rem;
 }
 
 .Menucard:active .Menucard__confirmation {
-  margin-right: -0.5rem;
+  margin-right: 0rem;
 }
 
 .fa-check-circle {
   color: white;
   font-size: 25px;
-  transform: rotate(360deg);
-  transition-duration: 0.5s;
+  transform: rotate(180deg);
+  transition-duration: 500ms;
 }
 
 .Menucard:hover .fa-check-circle {

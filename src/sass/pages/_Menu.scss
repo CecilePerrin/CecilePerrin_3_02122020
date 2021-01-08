@@ -112,23 +112,23 @@
        display: flex;
        align-items: center;
        justify-content: center;
-       transition-duration: 0.8s;
+       transition-duration: 500ms;
     }
  }
  
  .Menucard:hover .Menucard__confirmation {
-    margin-right: -0.5rem;
+    margin-right: 0rem;
  }
  
  .Menucard:active .Menucard__confirmation {
-    margin-right: -0.5rem;
+    margin-right: 0rem;
  }
  
  .fa-check-circle {
     color: white;
     font-size: 25px;
-    transform: rotate(360deg);
-    transition-duration: 0.5s;
+    transform: rotate(180deg);
+    transition-duration: 500ms;
  }
  
  .Menucard:hover .fa-check-circle {
